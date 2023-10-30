@@ -9,7 +9,7 @@ export class AuthServiseService {
 
   constructor(private http:HttpClient) { }
   getToken(data: any):Observable<any>{
-    return this.http.post(' https://615f-37-237-80-27.ngrok-free.app/login', data) 
+    return this.http.post('https://api.escuelajs.co/api/v1/auth/login', data)
   }
 
   getProdects():Observable<any>{

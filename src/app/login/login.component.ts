@@ -11,7 +11,8 @@ export class LoginComponent{
   loginData : any={
     email:'',
     password:''
-  } 
+  }
+  out:string=`Note: Use this email for log in: "john@mail.com" and this password: "changeme"`
 
   constructor(private auth:AuthServiseService){}
 
@@ -19,9 +20,13 @@ export class LoginComponent{
     console.log(this.loginData)
     this.auth.getToken(this.loginData).subscribe(
       (result)=>{
-        console.log(result.id)
+        console.log(result)
+        this.out="You are logged in"
       },
-      (error)=>{console.log(error)}  
+      (error)=>{
+        console.log(error)
+        this.out="the password or the email is wrong"
+      }  
     )
 
   }
