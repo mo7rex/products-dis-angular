@@ -1,0 +1,20 @@
+
+
+<div class="box">
+    <h3>Welcome, Create your own account</h3>
+    <form action="" class="form">
+      <input type="text" name="name" id="field" placeholder="name" [(ngModel)]="name">
+      <input type="email" name="email" id="field" placeholder="email" [(ngModel)]="email">
+      <input type="password" name="password" id="field" placeholder="password" [(ngModel)]="password">
+      <button>Sign Up</button>
+      <p>You already have an account? <a routerLink="/login">Sign up</a></p>
+    </form>
+</div>
+<div class="box2">
+    <h2>{{name}}</h2>
+    <h2>{{email}}</h2>
+</div>
+
+
+
+
